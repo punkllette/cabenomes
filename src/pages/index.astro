@@ -23,7 +23,7 @@ const faqs = [
   ['Posso utilizar pelo celular?', 'O aplicativo foi criado para uma experiência prática também em telas menores.'],
   ['Como funciona o acesso?', 'Após a confirmação da compra, você receberá as orientações de acesso.'],
   ['O pagamento é único ou recorrente?', 'O acesso é por pagamento único de R$ 27,90.'],
-  ['O que está incluso nos R$ 27,90?', 'O app Cabe no Mês, o e-book com 200 ideias de renda extra, podcasts, videoaulas, infográficos, acompanhamento de investimentos e experiência gamificada.'],
+  ['O que está incluso nos R$ 27,90?', 'O app Cabe no Mês, o e-book com 20 ideias de renda extra, podcasts, videoaulas, infográficos, acompanhamento de investimentos e experiência gamificada.'],
 ];
 ---
 <!doctype html>
@@ -32,7 +32,7 @@ const faqs = [
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <meta name="theme-color" content="#eef2f7" />
-  <meta name="description" content="Cabe no Mês: veja quanto ainda pode gastar até a próxima entrada. App, e-book com 200 ideias de renda extra e conteúdos bônus por R$ 27,90." />
+  <meta name="description" content="Cabe no Mês: veja quanto ainda pode gastar até a próxima entrada. App, e-book com 20 ideias de renda extra e conteúdos bônus por R$ 27,90." />
   <title>Cabe no Mês — App e bônus por R$ 27,90</title>
 </head>
 <body>
@@ -49,7 +49,7 @@ const faqs = [
 
   <section class="section audience-section"><div class="container audience-grid"><div><span class="section-kicker">feito para gente de verdade</span><h2>Feito para quem vive a vida real.</h2><p>O primeiro passo é conseguir enxergar o que acontece com o dinheiro que você tem hoje.</p><a class="button button-dark" href={checkoutUrl}>Conhecer o Cabe no Mês <Icon name="arrow" size={17} /></a></div><div class="audience-list">{['Autônomos e freelancers','Quem faz bicos ou recebe por trabalho','Pessoas com orçamento apertado','Estudantes começando a se organizar','Quem quer sair do improviso financeiro'].map((item, index) => <div class="audience-item"><span>{String(index + 1).padStart(2,'0')}</span><strong>{item}</strong><Icon name="check" size={17} /></div>)}</div></div></section>
   <BonusSection />
-  <section class="section offer-section" id="oferta"><div class="container offer-wrap"><div class="offer-copy"><span class="section-kicker">tudo incluso por um pagamento único</span><h2>O app para organizar o mês. Os bônus para ir além.</h2><p>Leve o Cabe no Mês, o e-book com 200 ideias de renda extra, a biblioteca de conteúdos e os recursos extras por R$ 27,90.</p><div class="offer-points"><span><Icon name="check" size={15} /> app completo</span><span><Icon name="check" size={15} /> todos os bônus inclusos</span><span><Icon name="check" size={15} /> pagamento único</span></div></div><div class="price-card"><span class="price-label">app + todos os bônus</span><div class="price-comparison">de <del>R$ 97,00</del> por</div><div class="price"><small>R$</small>27<span>,90</span></div><p>pagamento único</p><a class="button" href={checkoutUrl}>Quero tudo por R$ 27,90 <Icon name="arrow" size={17} /></a><small class="secure-note"><Icon name="lock" size={13} /> checkout seguro</small></div></div></section>
+  <section class="section offer-section" id="oferta"><div class="container offer-wrap"><div class="offer-copy"><span class="section-kicker">tudo incluso por um pagamento único</span><h2>O app para organizar o mês. Os bônus para ir além.</h2><p>Leve o Cabe no Mês, o e-book com 20 ideias de renda extra, a biblioteca de conteúdos e os recursos extras por R$ 27,90.</p><div class="offer-points"><span><Icon name="check" size={15} /> app completo</span><span><Icon name="check" size={15} /> todos os bônus inclusos</span><span><Icon name="check" size={15} /> pagamento único</span></div></div><div class="price-card"><span class="price-label">app + todos os bônus</span><div class="price-comparison">de <del>R$ 97,00</del> por</div><div class="price"><small>R$</small>27<span>,90</span></div><p>pagamento único</p><a class="button" href={checkoutUrl}>Quero tudo por R$ 27,90 <Icon name="arrow" size={17} /></a><small class="secure-note"><Icon name="lock" size={13} /> checkout seguro</small></div></div></section>
   <section class="section faq-section" id="perguntas"><div class="container faq-grid"><div><span class="section-kicker">ainda ficou uma dúvida?</span><h2>Perguntas frequentes</h2><p>Respostas diretas para você decidir com tranquilidade.</p></div><div class="faq-list">{faqs.map(([question, answer], index) => <div class:list={['faq-item', index === 0 && 'open']}><button type="button" aria-expanded={index === 0}>{question}<span class="faq-toggle"><Icon name="plus" size={17} /></span></button><p>{answer}</p></div>)}</div></div></section>
 </main>
 
