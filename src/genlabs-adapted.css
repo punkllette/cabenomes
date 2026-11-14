@@ -1,0 +1,120 @@
+/* GenLabs principles adapted to Saldo Livre: frosted shell, hairline grids,
+   Inter typography, pill navigation and compact bento surfaces. Brand stays blue. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --ink: #172235;
+  --muted: #66758d;
+  --green: #2455d6;
+  --lime: #7e9dff;
+  --mint: #eaf0ff;
+  --paper: #e9edf5;
+  --warm: #f8faff;
+  --line: #dbe3f0;
+  --surface: rgba(255, 255, 255, .88);
+  --night: #14213d;
+  --shadow-soft: 0 16px 45px rgba(27, 49, 91, .08);
+}
+
+body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #b9c6db, #879bbb 60%, #677c9f); }
+button, .button, .logo, .desktop-nav, .section-kicker, .eyebrow,
+.problem-card h3, .feature-card h3, .step h3, .audience-item strong,
+.price, .faq-item button { font-family: 'Inter', sans-serif; }
+h1, h2, h3 { font-family: 'Inter', sans-serif; }
+
+main, .site-footer { max-width: 1300px; margin-inline: auto; }
+main { margin-top: 28px; overflow: hidden; border: 1px solid rgba(255,255,255,.55); border-bottom: 0; border-radius: 38px 38px 0 0; box-shadow: 0 34px 90px rgba(14,30,58,.16); }
+.site-header { left: 50%; width: min(1300px, 100%); transform: translateX(-50%); top: 28px; }
+.header-inner { padding-block: 26px; }
+.desktop-nav { margin-left: 0; gap: 26px; padding: 12px 24px; border: 1px solid rgba(255,255,255,.9); border-radius: 999px; color: #52627d; background: rgba(255,255,255,.65); box-shadow: 0 5px 18px rgba(28,49,85,.07); backdrop-filter: blur(14px); }
+.desktop-nav a { transition: color .2s ease; }
+.logo { letter-spacing: -.055em; font-weight: 700; }
+.logo-mark { border-radius: 50%; background: linear-gradient(150deg, #5f86ed, #173eab); box-shadow: inset 0 1px 2px rgba(255,255,255,.45), 0 5px 15px rgba(28,75,186,.22); }
+
+.button { min-height: 46px; padding: 13px 21px; border: 1px solid rgba(255,255,255,.25); background: radial-gradient(circle at 20% 0, #4778f2, #2455d6 70%); box-shadow: inset 0 1px 2px rgba(255,255,255,.25), 0 11px 23px rgba(36,85,214,.22); }
+.button:hover { background: radial-gradient(circle at 20% 0, #5b85f1, #1c48bf 70%); box-shadow: inset 0 1px 2px rgba(255,255,255,.25), 0 15px 29px rgba(36,85,214,.28); }
+.button svg, .text-link svg { transition: transform .2s ease; }
+.button:hover svg, .text-link:hover svg { transform: translateX(3px); }
+.button-dark { background: linear-gradient(150deg, #263a63, #14213d); box-shadow: 0 10px 22px rgba(20,33,61,.15); }
+
+.hero { background: radial-gradient(circle at 82% 24%, rgba(155,183,255,.35), transparent 32%), linear-gradient(135deg, rgba(255,255,255,.96), rgba(244,248,255,.88)); }
+.hero::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(90deg, transparent 0 calc(25% - 1px), rgba(34,61,108,.045) calc(25% - 1px) 25%); }
+.hero-grid, .trust-row { position: relative; z-index: 1; }
+.hero-copy { max-width: 610px; }
+.eyebrow { width: fit-content; margin-bottom: 23px; padding: 8px 13px 8px 11px; border: 1px solid #e4eaf5; border-radius: 999px; background: rgba(255,255,255,.72); box-shadow: 0 4px 14px rgba(31,60,115,.05); letter-spacing: .11em; }
+.eyebrow-pulse { width: 7px; height: 7px; background: #4778f2; box-shadow: 0 0 0 4px #dbe5ff; }
+h1 { font-weight: 700; letter-spacing: -.07em; line-height: .98; }
+h1 em { background: linear-gradient(100deg, #2455d6, #6e8ee3); color: transparent; background-clip: text; -webkit-background-clip: text; }
+.hero-lead { max-width: 500px; padding-left: 18px; border-left: 2px solid #c3d3f5; line-height: 1.65; }
+.text-link { color: #254bad; }
+.play-circle { border-color: #cbd8f3; background: rgba(255,255,255,.75); }
+.phone-wrap { border: 1px solid rgba(255,255,255,.38); border-radius: 32px; background: radial-gradient(circle at 48% 32%, #345cab, #14274e 70%); box-shadow: 0 25px 50px rgba(19,41,87,.22), inset 0 1px 1px rgba(255,255,255,.2); }
+.phone-wrap::before { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(125deg, rgba(255,255,255,.08), transparent 45%), repeating-linear-gradient(90deg, transparent 0 calc(25% - 1px), rgba(255,255,255,.055) calc(25% - 1px) 25%); }
+.phone-glow { background: #648bf0; opacity: .42; }
+.phone { box-shadow: 14px 25px 45px rgba(3,13,35,.36); }
+.float-note { border-color: rgba(255,255,255,.8); border-radius: 16px; background: rgba(255,255,255,.91); box-shadow: 0 15px 33px rgba(4,18,48,.19); }
+.trust-row { color: #6e7e99; }
+
+.section-kicker { letter-spacing: .13em; }
+.section-heading h2, .audience-grid h2, .offer-copy h2, .learning-copy h2, .faq-grid h2 { letter-spacing: -.06em; font-weight: 700; }
+.problem-section, .faq-section { background: #f8faff; }
+.problem-grid { gap: 1px; padding: 1px; overflow: hidden; border-radius: 25px; background: #dce4ef; box-shadow: var(--shadow-soft); }
+.problem-card { border: 0; border-radius: 0; background: rgba(255,255,255,.96); }
+.problem-card:hover { box-shadow: inset 0 0 0 1px #bfcfff; background: #fbfcff; }
+.icon-box { background: #eaf0ff; border: 1px solid #dce6fb; }
+.card-number { color: #8a9ab4; }
+
+.feature-section { background: #edf2fc; }
+.feature-card { border-color: transparent; }
+.feature-card.selected, .feature-card:hover { border-color: #c9d8fa; background: rgba(255,255,255,.86); box-shadow: 0 10px 28px rgba(30,63,128,.08); backdrop-filter: blur(10px); }
+.feature-visual { border: 1px solid rgba(255,255,255,.22); background: radial-gradient(circle at 90% 0%, #3564c8, #1c3f8e 60%, #162d66); box-shadow: 0 22px 48px rgba(26,57,129,.2), inset 0 1px 1px rgba(255,255,255,.2); }
+.feature-visual::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(90deg, transparent 0 calc(25% - 1px), rgba(255,255,255,.045) calc(25% - 1px) 25%); }
+.visual-header, .visual-balance, .timeline, .visual-footer, #visual-content { position: relative; z-index: 1; }
+
+.how-section { background: radial-gradient(circle at 75% 10%, #223c72, #14213d 70%); }
+.step-line { background: #50617e; }
+.step-line-progress { background: #a5bbff; }
+.step-num { border-color: #5b7096; background: #182b50; color: #d4dfff; }
+.step.current .step-num { border-color: #abc2ff; color: #183d9b; background: #d5e1ff; }
+.step p { color: #becce4; }
+.audience-section { background: #f5f7fc; }
+.audience-list { border-color: #d9e3f2; }
+.audience-item { border-color: #d9e3f2; }
+.learning-section { background: #edf2fc; }
+.learning-card { border: 1px solid rgba(255,255,255,.78); background: rgba(255,255,255,.56); box-shadow: var(--shadow-soft); backdrop-filter: blur(12px); }
+.learning-copy p { color: #66758d; }
+.video-card { border: 1px solid rgba(255,255,255,.2); background: radial-gradient(circle at 80% 20%, #456fdb, #1a366d 72%); }
+.future-chip { border: 1px solid #e1e9f7; }
+
+.offer-section { background: radial-gradient(circle at 0% 0%, #4777e8, #2455d6 55%, #163f9d); }
+.offer-copy .section-kicker, .offer-copy > p, .offer-points { color: #e3ebff; }
+.offer-points svg { color: #b8d0ff; }
+.price-card { border: 1px solid rgba(255,255,255,.8); background: rgba(255,255,255,.96); box-shadow: 0 22px 48px rgba(8,34,107,.2); }
+.price-label { color: #5471a8; }
+.price-card p, .secure-note { color: #718099; }
+.faq-list { border-color: #dbe4f1; }
+.faq-item { border-color: #dbe4f1; }
+.faq-toggle { border-color: #c9d7ee; }
+.site-footer { background: #14213d; }
+.footer-bottom { border-color: #30466d; }
+
+@media (max-width: 850px) {
+  main { margin-top: 0; border-radius: 0; border: 0; }
+  .site-header { top: 0; }
+  .hero { padding-top: 115px; }
+  .phone-wrap { max-width: 420px; }
+  .feature-visual #visual-content { position: relative; }
+}
+@media (max-width: 520px) {
+  .hero { padding-top: 98px; }
+  .hero::before { background-size: 50% 100%; }
+  .hero-lead { padding-left: 14px; }
+  .phone-wrap { border-radius: 27px; }
+  .problem-grid { border-radius: 21px; }
+  .problem-card { min-height: 0; }
+  .offer-points { display: grid; grid-template-columns: 1fr; gap: 9px; margin-top: 20px; font-size: 12px; }
+  .offer-points span { gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button svg, .text-link svg { transition: none; }
+}
